@@ -4,8 +4,8 @@ import jwt from "jsonwebtoken";
 import { config } from "../../config/env.js";
 import { HTTP_STATUS } from "../../constants/httpStatus.js";
 import { MESSAGES } from "../../constants/messages.js";
-import prisma from "../../lib/prisma.js";
-import { HttpError } from "../../utils/HttpError.js";
+import prisma from "../../db/prisma.js";
+import { HttpError } from "../../helpers/HttpError.js";
 
 const SALT_ROUNDS = 10;
 

@@ -7,8 +7,8 @@ import swaggerUi from "swagger-ui-express";
 import { config } from "./config/env.js";
 import { HTTP_STATUS } from "./constants/httpStatus.js";
 import { openapiSpec } from "./docs/openapi.js";
-import { errorHandler } from "./middlewares/errorHandler.js";
-import { notFound } from "./middlewares/notFound.js";
+import { errorHandler } from "./middleware/errorHandler.js";
+import { notFound } from "./middleware/notFound.js";
 import apiRoutes from "./routes/index.js";
 
 const app = express();

@@ -1,4 +1,4 @@
-import prisma from "../../lib/prisma.js";
+import prisma from "../../db/prisma.js";
 
 export function findAll() {
   return prisma.feedback.findMany({ orderBy: { id: "asc" } });

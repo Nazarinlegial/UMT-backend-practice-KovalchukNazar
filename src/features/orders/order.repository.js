@@ -1,4 +1,4 @@
-import prisma from "../../lib/prisma.js";
+import prisma from "../../db/prisma.js";
 
 const withBouquet = {
   bouquet: { select: { id: true, title: true, price: true } },

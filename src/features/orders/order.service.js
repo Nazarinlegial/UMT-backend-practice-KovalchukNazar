@@ -1,6 +1,6 @@
 import { MESSAGES } from "../../constants/messages.js";
-import { HttpError } from "../../utils/HttpError.js";
-import { buildPaginatedResponse, getPaginationBounds } from "../../utils/pagination.js";
+import { HttpError } from "../../helpers/HttpError.js";
+import { buildPaginatedResponse, getPaginationBounds } from "../../helpers/pagination.js";
 import * as bouquetRepository from "../bouquets/bouquet.repository.js";
 import * as orderRepository from "./order.repository.js";
 

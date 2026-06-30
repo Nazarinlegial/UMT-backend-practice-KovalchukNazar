@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-import { requireAuth } from "../../middlewares/requireAuth.js";
-import { upload } from "../../middlewares/upload.js";
-import { validateBody, validateParams, validateQuery } from "../../middlewares/validate.js";
-import { idParamSchema } from "../../utils/commonSchemas.js";
+import { requireAuth } from "../../middleware/requireAuth.js";
+import { upload } from "../../middleware/upload.js";
+import { validateBody, validateParams, validateQuery } from "../../middleware/validate.js";
+import { idParamSchema } from "../../helpers/commonSchemas.js";
 import * as bouquetController from "./bouquet.controller.js";
 import { createBouquetSchema, favoriteBouquetSchema, listBouquetsQuerySchema, updateBouquetSchema } from "./bouquet.schemas.js";
 

@@ -1,5 +1,5 @@
 import { HTTP_STATUS } from "../../constants/httpStatus.js";
-import { asyncHandler } from "../../utils/asyncHandler.js";
+import { asyncHandler } from "../../helpers/asyncHandler.js";
 import * as authService from "./auth.service.js";
 
 export const login = asyncHandler(async (req, res) => {

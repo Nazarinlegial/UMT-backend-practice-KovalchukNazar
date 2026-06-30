@@ -2,9 +2,9 @@
 // on create, replace + cleanup on photo update, delete on remove) and the
 // favorite toggle. Throws HttpError; never touches req/res.
 import { MESSAGES } from "../../constants/messages.js";
-import { HttpError } from "../../utils/HttpError.js";
-import { buildPaginatedResponse, getPaginationBounds } from "../../utils/pagination.js";
-import { deleteImage, uploadImage } from "../../storage/cloudinaryStorage.js";
+import { HttpError } from "../../helpers/HttpError.js";
+import { buildPaginatedResponse, getPaginationBounds } from "../../helpers/pagination.js";
+import { deleteImage, uploadImage } from "../../uploads/cloudinaryStorage.js";
 import * as bouquetRepository from "./bouquet.repository.js";
 
 function buildWhere({ search, favorite }) {

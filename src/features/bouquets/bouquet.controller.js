@@ -1,7 +1,7 @@
 // HTTP layer for bouquets: request → service → response. No business logic here.
 import { HTTP_STATUS } from "../../constants/httpStatus.js";
 import { MESSAGES } from "../../constants/messages.js";
-import { asyncHandler } from "../../utils/asyncHandler.js";
+import { asyncHandler } from "../../helpers/asyncHandler.js";
 import * as bouquetService from "./bouquet.service.js";
 
 export const list = asyncHandler(async (req, res) => {

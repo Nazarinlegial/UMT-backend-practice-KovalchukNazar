@@ -1,6 +1,6 @@
 import { HTTP_STATUS } from "../../constants/httpStatus.js";
 import { MESSAGES } from "../../constants/messages.js";
-import { asyncHandler } from "../../utils/asyncHandler.js";
+import { asyncHandler } from "../../helpers/asyncHandler.js";
 import * as orderService from "./order.service.js";
 
 export const list = asyncHandler(async (req, res) => {

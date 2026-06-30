@@ -1,5 +1,5 @@
 // Data-access layer for bouquets: the ONLY place that talks to prisma.bouquet.
-import prisma from "../../lib/prisma.js";
+import prisma from "../../db/prisma.js";
 
 export function count(where = {}) {
   return prisma.bouquet.count({ where });

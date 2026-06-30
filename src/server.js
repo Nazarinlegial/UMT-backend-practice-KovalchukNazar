@@ -1,7 +1,7 @@
 import app from "./app.js";
 import { config } from "./config/env.js";
-import prisma from "./lib/prisma.js";
-import { ensureAdminUser } from "./modules/auth/auth.service.js";
+import prisma from "./db/prisma.js";
+import { ensureAdminUser } from "./features/auth/auth.service.js";
 
 async function start() {
   // Fail fast if the database is unreachable.

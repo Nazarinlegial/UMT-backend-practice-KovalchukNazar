@@ -1,5 +1,5 @@
 import { MESSAGES } from "../../constants/messages.js";
-import { HttpError } from "../../utils/HttpError.js";
+import { HttpError } from "../../helpers/HttpError.js";
 import * as feedbackRepository from "./feedback.repository.js";
 
 // Testimonials are a small, fully client-rendered slider, so the list endpoint

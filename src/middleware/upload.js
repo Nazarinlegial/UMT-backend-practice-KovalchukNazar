@@ -3,7 +3,7 @@ import multer from "multer";
 import { config } from "../config/env.js";
 import { HTTP_STATUS } from "../constants/httpStatus.js";
 import { MESSAGES } from "../constants/messages.js";
-import { HttpError } from "../utils/HttpError.js";
+import { HttpError } from "../helpers/HttpError.js";
 
 const ALLOWED_MIME = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
 

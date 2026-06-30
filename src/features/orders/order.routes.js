@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import { requireAuth } from "../../middlewares/requireAuth.js";
-import { validateBody, validateParams, validateQuery } from "../../middlewares/validate.js";
-import { idParamSchema } from "../../utils/commonSchemas.js";
+import { requireAuth } from "../../middleware/requireAuth.js";
+import { validateBody, validateParams, validateQuery } from "../../middleware/validate.js";
+import { idParamSchema } from "../../helpers/commonSchemas.js";
 import * as orderController from "./order.controller.js";
 import { createOrderSchema, listOrdersQuerySchema, updateOrderSchema } from "./order.schemas.js";
 

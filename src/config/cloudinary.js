@@ -1,6 +1,6 @@
 // Cloudinary SDK initialised from environment configuration. Image bytes never
 // touch the API's own disk — Multer buffers them in memory and they are streamed
-// straight to Cloudinary (see src/storage/cloudinaryStorage.js).
+// straight to Cloudinary (see src/uploads/cloudinaryStorage.js).
 import { v2 as cloudinary } from "cloudinary";
 
 import { config } from "./env.js";

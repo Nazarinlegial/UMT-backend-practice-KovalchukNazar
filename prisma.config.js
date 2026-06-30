@@ -1,5 +1,5 @@
 // Prisma CLI configuration. The runtime client connects through the
-// @prisma/adapter-pg driver (see src/lib/prisma.js); this file only tells the
+// @prisma/adapter-pg driver (see src/db/prisma.js); this file only tells the
 // CLI (migrate / db seed) where the schema, migrations and datasource live.
 import "dotenv/config";
 import { defineConfig } from "prisma/config";

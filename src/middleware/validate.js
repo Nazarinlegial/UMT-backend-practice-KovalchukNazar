@@ -1,6 +1,6 @@
 import { HTTP_STATUS } from "../constants/httpStatus.js";
-import { HttpError } from "../utils/HttpError.js";
-import { formatJoiError } from "../utils/formatJoiError.js";
+import { HttpError } from "../helpers/HttpError.js";
+import { formatJoiError } from "../helpers/formatJoiError.js";
 
 // Generic validation middleware factory. Validated/coerced values are stored on
 // `req.validated[source]` rather than reassigned onto `req.query`/`req.params`,
