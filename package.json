@@ -1,5 +1,5 @@
 {
-  "name": "umt-backend-practice-makedon-flora",
+  "name": "umt-backend-practice-kovalchuk-flora",
   "version": "1.0.0",
   "description": "Flora — flower boutique REST API (Express 5 + Prisma 7 + PostgreSQL)",
   "type": "module",
@@ -24,7 +24,7 @@
     "postgresql",
     "rest-api"
   ],
-  "author": "Oleksandr Makedon",
+  "author": "Nazar Kovalchuk",
   "license": "ISC",
   "dependencies": {
     "@prisma/adapter-pg": "^7.8.0",

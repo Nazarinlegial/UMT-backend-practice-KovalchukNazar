@@ -157,7 +157,7 @@ npm start        # production mode
 ## Run the frontend
 
 ```bash
-cd ../UMT-markup-practice-MakedonOleksandr
+cd ../UMT-markup-practice-KovalchukNazar
 npm install
 cp .env.example .env      # VITE_API_BASE_URL="/api"
 npm run dev               # http://localhost:4000 (Vite proxies /api → :3001)
@@ -201,7 +201,7 @@ Make sure the backend `CORS_ORIGIN` includes the Pages origin
 
 ```bash
 # Backend
-cd UMT-backend-practice-MakedonOleksandr
+cd UMT-backend-practice-KovalchukNazar
 npm install
 cp .env.example .env          # fill Cloudinary keys
 npm run db:up                 # Postgres in Docker (:5435)
@@ -210,7 +210,7 @@ npm run seed                  # demo data
 npm run dev                   # http://localhost:3001  (Swagger: /api-docs)
 
 # Frontend (second terminal)
-cd ../UMT-markup-practice-MakedonOleksandr
+cd ../UMT-markup-practice-KovalchukNazar
 npm install
 cp .env.example .env
 npm run dev                   # http://localhost:4000
