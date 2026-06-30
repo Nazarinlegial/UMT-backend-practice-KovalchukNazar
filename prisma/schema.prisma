@@ -1,0 +1,75 @@
+// Flora — flower boutique data model.
+// Runtime access goes through the @prisma/adapter-pg driver, so the datasource
+// block intentionally carries no `url` here — the CLI reads it from
+// prisma.config.js and the client passes a connection string at runtime.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// A bouquet in the catalogue. `favorite` flags the curated homepage carousel,
+/// so "bestsellers" is a view over bouquets, not a separate copy of them.
+model Bouquet {
+  id              Int      @id @default(autoincrement())
+  title           String
+  description     String
+  /// Price in whole US dollars (numeric — never store money as free text).
+  price           Int
+  /// Primary (1x) image URL. Seeded rows keep the frontend asset path; rows
+  /// created/updated via the API store the Cloudinary secure URL.
+  photoURL        String
+  /// Optional retina (2x) image URL (used by the frontend <img srcset>).
+  photoURL2x      String?
+  alt             String?
+  descriptionLong String?
+  favorite        Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  orders Order[]
+
+  @@index([favorite])
+  @@index([createdAt])
+}
+
+/// A customer testimonial shown in the feedback slider.
+model Feedback {
+  id        Int      @id @default(autoincrement())
+  text      String
+  author    String
+  location  String   @default("")
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+/// A customer order placed through the site's order form.
+model Order {
+  id        Int      @id @default(autoincrement())
+  name      String
+  phone     String
+  address   String?
+  message   String   @default("")
+  quantity  Int      @default(1)
+  // SetNull (not Cascade): deleting a bouquet must NOT erase historical orders.
+  bouquetId Int?
+  bouquet   Bouquet? @relation(fields: [bouquetId], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now())
+
+  @@index([bouquetId])
+  @@index([createdAt])
+}
+
+/// Back-office user (admin) allowed to manage the catalogue, feedbacks and
+/// orders. Password is stored as a bcrypt hash, never in plain text.
+model User {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  passwordHash String
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+}
